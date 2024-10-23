@@ -1,4 +1,5 @@
 using JwtAuth.Infrastructure.DataContext;
+using JwtAuth.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -29,6 +30,8 @@ public  static class DependencyInjection
         options.Password.RequiredUniqueChars = 1;
         options.Password.RequiredLength = 6;
         });
+
+        services.AddScoped<ITokenRepository, TokenRepository>();
 
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer( options => {
             options.TokenValidationParameters = new TokenValidationParameters{
