@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Models/.config/dotnet-tools.json" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Services/" />
   </ItemGroup>
 
