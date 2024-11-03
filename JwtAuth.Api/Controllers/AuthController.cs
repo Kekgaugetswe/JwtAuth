@@ -131,6 +131,43 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost]
+    [Route("assign-roles")]
+    public async Task<IActionResult> AssignRoles([FromBody] AssignRolesRequestDto request)
+    {
+        var user = await userManager.FindByEmailAsync(request.Email);
+        if (user == null)
+        {
+            ModelState.AddModelError("", "User not found");
+            return ValidationProblem(ModelState);
+        }
+
+        foreach (var role in request.Roles)
+        {
+            if (await roleManager.RoleExistsAsync(role))
+            {
+                var identityResult = await userManager.AddToRoleAsync(user, role);
+
+                if (!identityResult.Succeeded)
+                {
+                    foreach (var error in identityResult.Errors)
+                    {
+                        ModelState.AddModelError("", error.Description);
+
+                    }
+                    return ValidationProblem(ModelState);
+                }
+            }
+            else
+            {
+                ModelState.AddModelError("", $"Role '{role}' does not exist." );
+                return ValidationProblem(ModelState);
+            }
+        }
+
+        return Ok("Roles assigned  successfully.");
+    }
+
+    [HttpPost]
     [Route("create-role")]
     public async Task<IActionResult> CreateRoleAsync([FromBody] CreateRoleRequestDto requestDto)
     {
@@ -259,9 +296,9 @@ public class AuthController : ControllerBase
         // return Ok("If an account with that email exists, a reset link has been sent.");
         return Ok(new
         {
-            message =  "If an account with that email exists, a reset link has been sent.",
-            resetToken =  token,
-            resetLink =  resetLink
+            message = "If an account with that email exists, a reset link has been sent.",
+            resetToken = token,
+            resetLink = resetLink
 
         });
     }
