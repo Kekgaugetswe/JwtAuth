@@ -19,4 +19,8 @@
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.1.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\JwtAuth.Domain\JwtAuth.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

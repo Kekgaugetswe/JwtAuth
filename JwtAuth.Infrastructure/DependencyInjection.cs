@@ -1,11 +1,12 @@
+using JwtAuth.Domain.Interfaces;
 using JwtAuth.Infrastructure.DataContext;
 using JwtAuth.Infrastructure.Repositories;
+using JwtAuth.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
 namespace JwtAuth.Infrastructure;
@@ -32,6 +33,7 @@ public  static class DependencyInjection
         });
 
         services.AddScoped<ITokenRepository, TokenRepository>();
+        services.AddTransient<IEmailSender,EmailSender>();
 
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer( options => {
             options.TokenValidationParameters = new TokenValidationParameters{
