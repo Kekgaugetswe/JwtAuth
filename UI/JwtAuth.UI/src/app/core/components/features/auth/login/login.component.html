@@ -1,0 +1,100 @@
+<div class="container d-flex justify-content-center align-items-center">
+  <div class="container mt-5">
+    <!-- Tab navigation -->
+    <p-tabView>
+      <!-- Login Tab -->
+      <p-tabPanel header="Login">
+        <p-card header="Sign in">
+          <form>
+            <!-- Social Media Buttons -->
+            <div class="text-center mb-3">
+              <p>Sign in with:</p>
+              <button pButton icon="pi pi-facebook" class="p-button-rounded p-button-secondary mx-1"></button>
+              <button pButton icon="pi pi-google" class="p-button-rounded p-button-secondary mx-1"></button>
+              <button pButton icon="pi pi-twitter" class="p-button-rounded p-button-secondary mx-1"></button>
+              <button pButton icon="pi pi-github" class="p-button-rounded p-button-secondary mx-1"></button>
+            </div>
+
+            <p class="text-center">or:</p>
+
+            <!-- Email Input -->
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Email or Username</label>
+              <input pInputText id="loginEmail" type="email" class="w-100" placeholder="Enter your email" />
+            </div>
+
+            <!-- Password Input -->
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Password</label>
+              <input pPassword id="loginPassword" class="w-100" placeholder="Enter your password" />
+            </div>
+
+            <!-- Remember Me and Forgot Password -->
+            <div class="d-flex justify-content-between mb-3">
+              <p-checkbox inputId="rememberMe" label="Remember me"></p-checkbox>
+              <a href="#" class="text-primary">Forgot password?</a>
+            </div>
+
+            <!-- Submit Button -->
+            <button pButton type="submit" label="Sign in" class="p-button-primary w-100 mb-3"></button>
+
+            <!-- Register Link -->
+            <div class="text-center">
+              <p>Not a member? <a href="#" class="text-primary">Register</a></p>
+            </div>
+          </form>
+        </p-card>
+      </p-tabPanel>
+
+      <!-- Register Tab -->
+      <p-tabPanel header="Register">
+        <p-card header="Sign up">
+          <form>
+            <!-- Social Media Buttons -->
+            <div class="text-center mb-3">
+              <p>Sign up with:</p>
+              <button pButton icon="pi pi-facebook" class="p-button-rounded p-button-secondary mx-1"></button>
+              <button pButton icon="pi pi-google" class="p-button-rounded p-button-secondary mx-1"></button>
+              <button pButton icon="pi pi-twitter" class="p-button-rounded p-button-secondary mx-1"></button>
+              <button pButton icon="pi pi-github" class="p-button-rounded p-button-secondary mx-1"></button>
+            </div>
+
+            <p class="text-center">or:</p>
+
+            <!-- Name Input -->
+            <div class="mb-3">
+              <label for="registerName" class="form-label">Name</label>
+              <input pInputText id="registerName" type="text" class="w-100" placeholder="Enter your name" />
+            </div>
+
+            <!-- Email Input -->
+            <div class="mb-3">
+              <label for="registerEmail" class="form-label">Email</label>
+              <input pInputText id="registerEmail" type="email" class="w-100" placeholder="Enter your email" />
+            </div>
+
+            <!-- Password Input -->
+            <div class="mb-3">
+              <label for="registerPassword" class="form-label">Password</label>
+              <input pPassword id="registerPassword" class="w-100" placeholder="Create a password" />
+            </div>
+
+            <!-- Confirm Password Input -->
+            <div class="mb-3">
+              <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
+              <input pPassword id="registerConfirmPassword" class="w-100" placeholder="Repeat your password" />
+            </div>
+
+            <!-- Terms Checkbox -->
+            <div class="mb-3 text-center">
+              <p-checkbox inputId="terms" label="I agree to the terms and conditions"></p-checkbox>
+            </div>
+
+            <!-- Submit Button -->
+            <button pButton type="submit" label="Sign up" class="p-button-primary w-100 mb-3"></button>
+          </form>
+        </p-card>
+      </p-tabPanel>
+    </p-tabView>
+  </div>
+</div>
