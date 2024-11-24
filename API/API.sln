@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JwtAuth.Domain", "JwtAuth.Domain\JwtAuth.Domain.csproj", "{4576C83B-BE65-4A9A-B28E-0D39334E95BE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JwtAuth.Infrastructure", "JwtAuth.Infrastructure\JwtAuth.Infrastructure.csproj", "{815CAEBB-F6D2-4C28-9EA8-D21FF87024DD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JwtAuth.Api", "JwtAuth.Api\JwtAuth.Api.csproj", "{F857099F-ADD1-41E7-B802-C7116CE07089}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4576C83B-BE65-4A9A-B28E-0D39334E95BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4576C83B-BE65-4A9A-B28E-0D39334E95BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4576C83B-BE65-4A9A-B28E-0D39334E95BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4576C83B-BE65-4A9A-B28E-0D39334E95BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{815CAEBB-F6D2-4C28-9EA8-D21FF87024DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{815CAEBB-F6D2-4C28-9EA8-D21FF87024DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{815CAEBB-F6D2-4C28-9EA8-D21FF87024DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{815CAEBB-F6D2-4C28-9EA8-D21FF87024DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F857099F-ADD1-41E7-B802-C7116CE07089}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F857099F-ADD1-41E7-B802-C7116CE07089}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F857099F-ADD1-41E7-B802-C7116CE07089}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F857099F-ADD1-41E7-B802-C7116CE07089}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB4F3541-49F7-427D-BD81-3C25B375AA6D}
+	EndGlobalSection
+EndGlobal

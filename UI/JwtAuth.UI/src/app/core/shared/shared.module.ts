@@ -6,8 +6,10 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
 import { CheckboxModule } from 'primeng/checkbox';
+import { FormsModule } from '@angular/forms';
 
 export const PRIME_NG_IMPORTS = [
+  FormsModule,
   CommonModule,
   TabViewModule,
   CardModule,
