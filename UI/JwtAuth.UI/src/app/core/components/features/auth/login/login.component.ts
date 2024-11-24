@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { LoginRequest } from '../models/login-request';
 import { CardModule } from 'primeng/card';
 import { PRIME_NG_IMPORTS } from '../../../../shared/shared.module';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ export class LoginComponent {
 
   model: LoginRequest;
 
-  constructor() {
+  constructor( private readonly authService: AuthService) {
   this.model = {
     email: '',
     password: ''
@@ -22,5 +23,15 @@ export class LoginComponent {
 
   }
 
-  onFormSubmit(): void {}
+  onFormSubmit(): void {
+    this.authService.login(this.model)
+    .subscribe({
+      next: (response)=> {
+        console.log(response);
+      },
+      error: (err) => {
+        console.error('Login error:', err);
+      }
+    })
+  }
 }
